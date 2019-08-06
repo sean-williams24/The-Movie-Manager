@@ -14,8 +14,6 @@ extension UIViewController {
         TMDBClient.logout {
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
-                print("SessionID: \(TMDBClient.Auth.sessionId)")
-                print("Request Token: \(TMDBClient.Auth.requestToken)")
             }
         }
     }

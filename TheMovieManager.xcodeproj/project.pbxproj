@@ -35,6 +35,8 @@
 		2316888D2122322D003C820E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316888C2122322D003C820E /* Colors.swift */; };
 		2316888F2122646A003C820E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316888E2122646A003C820E /* GradientView.swift */; };
 		2316889121226AE7003C820E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316889021226AE7003C820E /* LoginTextField.swift */; };
+		CECACE1922F988300088505A /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECACE1822F988300088505A /* APIKeys.plist */; };
+		CECACE1B22F98B2A0088505A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECACE1A22F98B2A0088505A /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		2316888C2122322D003C820E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2316888E2122646A003C820E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2316889021226AE7003C820E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		CECACE1822F988300088505A /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+		CECACE1A22F98B2A0088505A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				231688542121C92D003C820E /* Info.plist */,
+				CECACE1822F988300088505A /* APIKeys.plist */,
 				231688482121C92C003C820E /* AppDelegate.swift */,
 				2316885A2121C941003C820E /* Model */,
 				2316885B2121C951003C820E /* View */,
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				231688722121CB2D003C820E /* MovieModel.swift */,
+				CECACE1A22F98B2A0088505A /* Keys.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECACE1922F988300088505A /* APIKeys.plist in Resources */,
 				231688532121C92D003C820E /* LaunchScreen.storyboard in Resources */,
 				2311AC0A2178E31500137A84 /* Colors.xcassets in Resources */,
 				231688502121C92D003C820E /* Assets.xcassets in Resources */,
@@ -294,6 +301,7 @@
 				231688832121CBE3003C820E /* LoginRequest.swift in Sources */,
 				231688752121CB43003C820E /* Movie.swift in Sources */,
 				2316886A2121CADA003C820E /* LoginButton.swift in Sources */,
+				CECACE1B22F98B2A0088505A /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

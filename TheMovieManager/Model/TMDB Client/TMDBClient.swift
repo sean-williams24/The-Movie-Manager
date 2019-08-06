@@ -11,9 +11,10 @@ import UIKit
 
 class TMDBClient {
     
-    static let apiKey = "17bee75c3499c8e989f0e314d03cb8e5"
     
-    struct Auth {
+    static var apiKey = ""
+    
+    private struct Auth {
         static var accountId = 0
         static var requestToken = ""
         static var sessionId = ""
@@ -67,6 +68,7 @@ class TMDBClient {
                 completion([], error)
             }
         }
+        
     }
     
     class func getFavorites(completion: @escaping ([Movie], Error?) -> Void) {
@@ -140,6 +142,14 @@ class TMDBClient {
     }
     
     class func getRequestToken(completionHandler: @escaping (Bool, Error?) -> Void) {
+        // Grab API Key from plist and assign to variable
+        if  let path = Bundle.main.path(forResource: "APIKeys", ofType: "plist"),
+            let xml = FileManager.default.contents(atPath: path),
+            let APIKeys = try? PropertyListDecoder().decode(APIKeys.self, from: xml)
+        {
+            print(APIKeys.TMDBKey)
+            apiKey = APIKeys.TMDBKey
+        }
         taskForGetRequest(url: Endpoints.getRequestToken.url, response: RequestTokenResponse.self) { (response, error) in
             if let response = response {
                 Auth.requestToken = response.requestToken

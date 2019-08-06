@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
+        
         emailTextField.text = ""
         passwordTextField.text = ""
     }
@@ -42,7 +44,6 @@ class LoginViewController: UIViewController {
     
     func handleRequestTokenResponse(success: Bool, error: Error?) {
         if success {
-            print("Get Request token success: \(TMDBClient.Auth.requestToken)")
             TMDBClient.login(username: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completionHandler: self.handleLoginResponse(success:error:))
         } else {
             showLoginFailure(message: error?.localizedDescription ?? "")
@@ -51,7 +52,6 @@ class LoginViewController: UIViewController {
     
     
     func handleLoginResponse(success: Bool, error: Error?) {
-        print("Validated request token: \(TMDBClient.Auth.requestToken)")
         if success {
             TMDBClient.createSessionsID(completionHandler: self.handleSessionResponse(success:error:))
         } else {
